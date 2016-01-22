@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+    
+    a(href="/restaurants/new") Create
+    
+      each item in places
+        h2 
+          a(href='/restaurants/#{item.id}') #{item.name}
+          h3 #{item.city}, #{item.state}
+          h3 #{item.cuisine} -- #{item.rating} Stars!!
+          img(src="#{item.img}" class="image")
+          h3 #{item.bio}
+          h3 #{item.neighborhood}
+          br
+          br
+          br
+          br

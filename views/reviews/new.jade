@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  h1 new review
+  form(action="/restaurants/#{id}/reviews" method="POST")
+    input(type="text" placeholder="Name" name="nameR")
+    input(type="date" placeholder="date" name="date")
+    input(type="radio" name="ratingR" value="1" checked)
+    input(type="radio" name="ratingR" value="2") 
+    input(type="radio" name="ratingR" value="3") 
+    input(type="radio" name="ratingR" value="4") 
+    input(type="radio" name="ratingR" value="5") 
+    textarea(type="text" placeholder="bio" name="review")
+    input(type="submit")

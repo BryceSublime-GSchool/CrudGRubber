@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+  a(href='/neighborhoods/new') New Hood
+  h1= title
+    p this is the map page
+    
+    
+    
+    //- each location, index in neighborhoods
+    //- div(id="map#{index}" style="height:300px; width:300px; border:1px solid #888")
+    //- 
+    //- script.
+    //-   function initMap(){
+    //-     console.log(!{JSON.stringify(neighborhoods)})
+    //-   }
+    //-   var map;
+    //-   var latty = #{lat_long.lat};
+    //-   var longy = #{lat_long.lng};
+    //-   function initMap() {
+    //-     map = new google.maps.Map(document.getElementById('map'), {
+    //-       center: {lat: latty, lng: longy},
+    //-       zoom: 13
+    //-     });
+    //-   }
+    //- script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2R7OuzuTr3cWKV47SDvjV7Rowt7RD3F0&callback=initMap")

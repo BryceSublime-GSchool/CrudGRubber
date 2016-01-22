@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+  
+  h1 SHOW
+
+  h4 #{name}
+  h4 #{city} #{state}
+  h4 #{cuisine} -- #{rating} Stars!!!
+  h4 #{id}
+  img(src="#{img}" class="imageshow")
+  h4 #{neighborhood}
+    div.reviews
+    
+
+ 
+ 
+  form(action="/restaurants/#{id}/delete" method="POST")       
+    button(type="submit") Delete
+   
+  form(action="/restaurants/#{id}/edit" method="GET")
+    button(type="submit") Edit
+  
+  a(href="/restaurants/#{id}/reviews") View Reviews
+  
