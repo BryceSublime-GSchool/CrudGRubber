@@ -1,18 +1,25 @@
 extends ../layout
 
 block content
-    
+  .header
+    h1 gTables
+  .newRest
     a(href="/restaurants/new") Create
-    
-      each item in places
-        h2 
-          a(href='/restaurants/#{item.id}') #{item.name}
-          h3 #{item.city}, #{item.state}
-          h3 #{item.cuisine} -- #{item.rating} Stars!!
-          img(src="#{item.img}" class="image")
-          h3 #{item.bio}
-          h3 #{item.neighborhood}
-          br
-          br
-          br
-          br
+  .bigContainer
+    .container
+      each restaurant in restaurants
+        .box
+          a(href='/restaurants/#{restaurant.id}') 
+          h3= restaurant.name
+          .imageDiv
+            a(href='/restaurants/#{restaurant.id}')
+              img(src="#{restaurant.img}" class="image")
+          h3= restaurant.city 
+          h3= restaurant.state
+          .cuisine= restaurant.cuisine
+          //- h3 restaurant.rating} Stars!!
+          .bio= restaurant.bio
+          .hood= restaurant.neighborhood
+          .starDiv
+            -for(var i=0; i < restaurant.rating; i++)
+              img.star(src='http://www.clker.com/cliparts/R/i/A/t/X/O/star-orange-md.png')

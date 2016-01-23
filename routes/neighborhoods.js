@@ -6,12 +6,13 @@ function Neighborhoods(){
   return knex('neighborhoods')
 }
 
-router.get('/index', function(req, res, next){
+router.get('/', function(req, res, next){
   res.render('neighborhoods/index')
 });
 
 router.get('/new', function(req, res, next) {
-  res.render('neighborhoods/new')
+
+  res.render('neighborhoods/new', {restaurant_id: req.params.restaurant_id})
 })
 
 router.get('/:id', function(req, res, next){
@@ -34,12 +35,10 @@ router.get('/:id', function(req, res, next){
 });
 
 
-router.post('/index', function(req, res, next){
-  Neighborhoods().insert({
-    nameN:req.body.neighborhood,
-    epicenter:req.body.epicenter
-  }).then(function(result){
-    res.redirect('/neighborhoods/index')
+router.post('/', function(req, res, next){
+  req.body.restaurant_id = req.params.restaurant_id;
+  Neighborhoods().insert(req.body).then(function(result){
+    res.redirect('/neighborhoods')
   })
 })
 

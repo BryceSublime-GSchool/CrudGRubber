@@ -2,8 +2,21 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet'. href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css', type='text/css')
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css")
+
     link(rel='stylesheet', href='/stylesheets/style.css')
-    
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' type='text/css')
   body
-    block content
-    a(href="/neighborhoods/index") HOODZ
+  block content
+  .row
+    .col.s12
+      ul.tabs
+        li.tab.col.s3
+          a(href='/restaurants') Restaurants
+        li.tab.col.s3
+          a.active(href='/neighborhoods') Neighborhoods
+        li.tab.col.s3
+          a(href='/admin') Admin
+    
+      

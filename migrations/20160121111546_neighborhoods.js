@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('nameN');
     table.string('epicenter');
+    table.integer('restaurant_id');
   })
 };
 

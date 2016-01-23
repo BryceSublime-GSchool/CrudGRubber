@@ -4,22 +4,24 @@ block content
   
   h1 SHOW
 
-  h4 #{name}
-  h4 #{city} #{state}
-  h4 #{cuisine} -- #{rating} Stars!!!
-  h4 #{id}
-  img(src="#{img}" class="imageshow")
-  h4 #{neighborhood}
+  h4 #{restaurant.name}
+  h4 #{restaurant.city} #{restaurant.state}
+  h4 #{restaurant.cuisine} -- #{restaurant.rating} Stars!!!
+  h4 #{restaurant.id}
+  img(src="#{restaurant.img}" class="imageshow")
+  h4 #{restaurant.neighborhood}
     div.reviews
     
 
  
  
-  form(action="/restaurants/#{id}/delete" method="POST")       
+  form(action="/restaurants/#{restaurant.id}/delete" method="POST")       
     button(type="submit") Delete
    
-  form(action="/restaurants/#{id}/edit" method="GET")
+  form(action="/restaurants/#{restaurant.id}/edit" method="GET")
     button(type="submit") Edit
   
-  a(href="/restaurants/#{id}/reviews") View Reviews
+  a(href="/restaurants/#{restaurant.id}/reviews") View Reviews
+  
+  a(href="/restaurants/#{restaurant.id}/neighborhoods/new") Add New Hood
   

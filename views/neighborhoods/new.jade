@@ -2,8 +2,8 @@ extends ../layout
 
 block content
   div.header
-  h1 create
-  form(action="/neighborhoods/index" method="POST")
-    input(type="text" placeholder="Name" name="neighborhood")
-    input(type="text" placeholder="streetOne" name="epicenter")
-    input(type="submit")
+    h1 create
+    form(action="/neighborhoods" method="POST")
+      input(type="text" placeholder="Name" name="nameN")
+      input(type="text" placeholder="streetOne" name="epicenter")
+      input(type="submit")
