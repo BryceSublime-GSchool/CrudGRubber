@@ -1,9 +1,17 @@
 extends layout
 
 block content
-  .header
-    h1 gTables
-  .newRest
-    a(href='/restaurants') GO
-  .bigContainer
-    .container
+  .row
+    .col.s12
+      ul.tabs
+        li.tab.col.s3
+          a(href='/restaurants') Restaurants
+        li.tab.col.s3
+          a(href='/neighborhoods') Neighborhoods
+        li.tab.col.s3
+          a(href='/admin') Admin
+    .header
+      h3 gTables
+    .newRest
+      a(href='/restaurants') GO
+    

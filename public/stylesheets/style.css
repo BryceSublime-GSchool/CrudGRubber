@@ -4,25 +4,78 @@
   font-weight: 400;
   margin:0;
   }
-body {
+
+
+#submit{
+  border-radius: 5px;
+  background-color: #CD6259;
+  position: relative;
+  right: 50px;
+  border-style: none;
+
 }
 
+h3{
+  font-size: 24px;
+}
+h4{
+  position: relative;
+  font-size: 15px;
+  margin-left: 10%;
+  line-height: 2px;
 
+}
 .box{
   /*position: relative;*/
   margin:25px;
+  width: 30vw;
+  height: 40vh;
+  border: 3px solid rgba(229, 63, 76, .5);
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  overflow: hidden;
+
 }
 
-img{
-  width: 75%;
-  height: 75%;
+.location{
+  position: relative;
+  width: 20%;
+  height: 20%;
+}
+
+.cuisine{
+  width: 20%;
+  height: 20%;
+}
+
+.image{
+  position: relative;
+  width: 50%;
+  height: 50%;
+  left: 20%;
 }
 
 .star{
   width: 1.5vw;
   height: 1.5vw;
 }
+.bigcontainer{
+  display: flex;
+  flex-direction: row;
+}
+.container{
+  -webkit-box-shadow: 9px 11px 5px -5px rgba(0,0,0,0.39);
+-moz-box-shadow: 9px 11px 5px -5px rgba(0,0,0,0.39);
+box-shadow: 9px 11px 5px -5px rgba(0,0,0,0.39);
+  width: 40vw;
+  height: 65vh;
+  padding: 20px 30px 30px 30px;
+  border: 3px solid rgba(229, 63, 76, .5);
+  overflow: hidden;
+}
 
 .row{
-  top: 50px;
+  width: 100vw;
+  height: 20vh;
 }

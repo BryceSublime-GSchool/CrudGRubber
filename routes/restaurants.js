@@ -20,10 +20,16 @@ router.get('/new', function(req, res, next) {
 
 
 router.post('/', function(req, res, next) {
-  Restaurants().insert(req.body).then(function(result){
-     res.redirect('/restaurants');
-   })
-})
+  var errors = [];
+  if (!req.body.name.trim()){errors.push('name cannot be blank')}
+  if(errors.length){
+    res.render('resturants/new', {userInput: req.body})
+  } else {
+    Restaurants().insert(req.body).then(function(result){
+      res.redirect('/restaurants');
+})}
+   });
+
 
 router.get('/:id', function(req, res, next){
   Restaurants().where('id', req.params.id).first().then(function(restaurant){
